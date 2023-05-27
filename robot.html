@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Title</title>
+        <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-entity position = '0 15 15'>
+                <a-camera></a-camera>
+            </a-entity>
+            <a-sky color="white"></a-sky>
+
+            <a-plane src="#ground" height="100" width="100" color="black" rotation="-90 0 0"></a-plane>
+
+
+            <a-sphere src='#foot1'position = '0 0 0' radius = '2.25' color = 'salmon'></a-sphere>
+            <a-sphere src='#foot1'position = '5 0 0' radius = '2.25' color = 'salmon'></a-sphere>
+
+            <a-cylinder src='#foot1' radius = 1 height = 8 position = '0 5 0' radius = '2' color = 'orange'></a-cylinder>
+            <a-cylinder src='#foot2' radius = 1 height = 8 position = '5 5 0' radius = '2' color = 'orange'></a-cylinder>
+
+            <a-box src='#body' width = 10 height = 10 length = 2 position = '2.5 10 1' color = '#2652ff'></a-box>
+
+            <a-box src='#neck' width = 5 height = 4 length = 2 position = '2.5 15 0.5' color = 'orange'></a-box>
+
+            <a-box src='#head' width = 8 height = 6 length = 2 position = '2.5 19 1' color = '#2652ff'></a-box>
+
+            <a-sphere src='#eye1'position = '1 20 0' radius = '2.0' color = 'white'></a-sphere>
+            <a-sphere src='#eye2'position = '4 20 0' radius = '2.0' color = 'white'></a-sphere>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0'
+            animation="property: position; from:0 0 0.9;to: 0 -1 0.9;dir:alternate; loop: true; dur: 1000;"            
+            >
+            <a-sphere src='#pupil1'position = '1 20 2' radius = '0.45' color = 'black'></a-sphere>
+
+            </a-entity>
+
+
+            <a-entity position = '0 0 0' rotation = '0 0 0'
+            animation="property: position; from:3 0 0.9;to: 3 -1 0.9;dir:alternate; loop: true; dur: 1000;"            
+            >
+            <a-sphere src='#pupil2'position = '1 20 2' radius = '0.45' color = 'black'></a-sphere>
+
+            </a-entity>
+
+
+            <a-torus src=#smile arc = '-180' position = '2.5 18 2' radius = 1 color = "yellow"></a-torus>
+
+            <a-cylinder src='#leftarm1' rotation = '45 100 0' radius = .8 height = 5 position = '-3 12 0' color = 'orange'></a-cylinder>
+            <a-sphere src='#elbow1'position = '-5 10 .5' radius = '1.1' color = 'red'></a-sphere>
+            <a-cylinder src='#leftarm2' rotation = '140 100 0' radius = .8 height = 4.5 position = '-7 12 0.8' color = 'orange'></a-cylinder>=
+            <a-dodecahedron color="#2652ff" radius="1.85" position = '-8.5 14 1'></a-dodecahedron>
+
+            <a-cylinder src='#rightarm1' rotation = '140 100 0' radius = .8 height = 5 position = '8 12 0' color = 'orange'></a-cylinder>
+            <a-sphere src='#elbow2'position = '10 10 ' radius = '1.1' color = 'red'></a-sphere>
+            <a-cylinder src='#rightarm2' rotation = '45 100 0' radius = .8 height = 4.5 position = '12 12 0' color = 'orange'></a-cylinder>=
+            <a-dodecahedron color="#2652ff" radius="1.85" position = '12.5 14 1'></a-dodecahedron>
+
+            <a-box src='#box1' width = 2.5 height = 2.5 length = 2.5 position = '-0.5 13 1.5' color = 'red'></a-box>
+            <a-box src='#box2' width = 2.5 height = 2.5 length = 2.5 position = '-0.5 10 1.5' color = 'pink'></a-box>
+            <a-box src='#box3' width = 2.5 height = 2.5 length = 2.5 position = '-0.5 7 1.5' color = 'orange'></a-box>
+
+            <a-box src='#box4' width = 2.5 height = 2.5 length = 2.5 position = '2.5 13 1.5' color = 'green'></a-box>
+            <a-box src='#box5' width = 2.5 height = 2.5 length = 2.5 position = '2.5 10 1.5' color = 'yellow'></a-box>
+            <a-box src='#box6' width = 2.5 height = 2.5 length = 2.5 position = '2.5 7 1.5' color = 'purple'></a-box>
+
+            <a-box src='#box7' width = 2.5 height = 2.5 length = 2.5 position = '5.5 13 1.5' color = 'orange'></a-box>
+            <a-box src='#box8' width = 2.5 height = 2.5 length = 2.5 position = '5.5 10 1.5' color = 'red'></a-box>
+            <a-box src='#box9' width = 2.5 height = 2.5 length = 2.5 position = '5.5 7 1.5' color = 'green'></a-box>
+
+            
+
+            <a-sphere src='#antennacircle'position = '2.5 23 -1' radius = '2.25' color = 'yellow'></a-sphere>
+
+            <a-entity position = '0 0 0' rotation = '0 0 0'
+                animation = 'property: position; from:-1 0 0.9;to: 1.5 0 0;dir:alternate; loop: true; dur: 1000;'
+                >
+
+                <a-cylinder src='#antennacylinder' radius = 0.1 height = 4 position = '2.5 26 -1' color = 'black'></a-cylinder>
+    
+                <a-sphere src='#antennacircle2'position = '2.5 28 -1' radius = '0.65' color = 'red'></a-sphere>
+            </a-entity>
+            
+
+            </a-entity> 
+        </a-scene>
+    </body>
+</html>
